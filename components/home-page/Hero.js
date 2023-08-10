@@ -6,7 +6,7 @@ function Hero() {
     <section className={classes.hero}>
       <div className={classes.image}>
         <Image
-          src="/images/site/max.png"
+          src="/images/site/samplePic.png"
           alt="An picture of the author"
           width={300}
           height={300}

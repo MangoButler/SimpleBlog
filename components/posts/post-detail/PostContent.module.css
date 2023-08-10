@@ -23,7 +23,7 @@
 }
 
 .image img {
-  object-fit: cover;
+  object-fit: contain;
   max-width: 100%;
 }
 
