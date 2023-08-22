@@ -9,3 +9,10 @@ export function validateEmail(email) {
 export function validateMessage(message) {
   return message.trim() !== "" && message.length >= 20 && message.includes(" ");
 }
+
+export function validatePassword(password){
+  const hasNumber = /[0-9]/.test(password);
+  const hasLetter = /[a-zA-Z]/.test(password);
+  const hasSeven = password.trim().length > 7;
+  return hasNumber && hasLetter && hasSeven;
+}

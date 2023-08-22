@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import classes from './notification.module.css';
 import { useContext } from 'react';
 import NotificationContext from '../../store/notification-context';
+import Loader from './Loader';
 
 function Notification(props) {
   const { title, message, status } = props;
@@ -23,6 +24,7 @@ function Notification(props) {
   return ReactDOM.createPortal((
     <div className={cssClasses} onClick={notificationCtx.hideNotification}>
       <h2>{title}</h2>
+      {status === 'pending' && <Loader/>}
       <p>{message}</p>
     </div>
   ), document.getElementById('notifications'));
